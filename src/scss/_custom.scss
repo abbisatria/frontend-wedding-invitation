@@ -9,6 +9,12 @@ body {
   padding-right: 30px !important;
 }
 
+.btn-login {
+  background-color: #321fdb;
+  color: #FFFFFF !important;
+  border-radius: 4px;
+}
+
 .authentication-image {
   background-image: linear-gradient(
     0deg,
@@ -34,4 +40,109 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 0 80px 0 80px;
+}
+
+.card-fitur {
+  background-color: #3252DF;
+  padding: 20px 20px 0px 20px;
+  border-radius: 18px;
+  color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.paket-wedding {
+  background-color: #3252DF;
+  color: #FFFFFF;
+  padding: 50px 0px 50px 0px;
+}
+
+.progressbar {
+  counter-reset: step;
+  padding-left: 0px;
+}
+.progressbar li {
+  list-style-type: none;
+  width: 25%;
+  float: left;
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #898989;
+}
+.progressbar li:before {
+  width: 50px;
+  height: 50px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 50px;
+  background-color: #E5E5E5;
+  display: block;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+}
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #7d7d7d;
+  top: 25px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active:before {
+  background-color: #3252DF;
+  color: #FFFFFF;
+}
+.progressbar li.active + li:after {
+  background-color: #3252DF;
+}
+
+.template {
+  height: 421px;
+  border-radius: 20px;
+  background-color: #3252DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    z-index: -1;
+    .template-hover {
+      -webkit-transition: 0.2s ease;
+      transition: 0.2s ease;
+      z-index: 99;
+    }
+  }
+  .template-hover {
+    z-index: -1;
+  }
+
+}
+
+.foto-album {
+  position: relative;
+  .delete-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: #FFFFFF;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    cursor: pointer;
+  }
+  img {
+    height: 421px;
+    border-radius: 20px;
+  }
 }
